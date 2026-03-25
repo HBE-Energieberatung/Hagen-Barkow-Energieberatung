@@ -23,7 +23,7 @@ function renderCalculator(code){
       <div class="calculator-side">
         <div class="eyebrow">Kostenrechner</div>
         <h2>Was kostet meine Leistung?</h2>
-        <p class="section-intro">Die Werte basieren auf den hinterlegten Standard-Arbeitspaketen und Stundensätzen aus Ihrem Angebotsgenerator. Für die Website zeige ich daraus bewusst eine Spanne von ±10 % als Orientierungswert.</p>
+        <p class="section-intro">Wählen Sie eine Leistung und sehen Sie, welche Arbeitspakete enthalten sind und was das realistisch kostet. Die Spanne von ±10 % bildet einen typischen Projektkorridor ab – der genaue Preis hängt von Objekt und Unterlagenlage ab.</p>
         <div class="svc-pills calc-pills">
           ${Object.values(CALC_DATA).map(item => `<button class="svc-pill ${item.code===code?'active':''}" data-code="${item.code}"><span class="pill-code">${item.code}</span><span class="pill-name">${item.title}</span></button>`).join('')}
         </div>
@@ -31,7 +31,7 @@ function renderCalculator(code){
       <div class="calculator-result-card">
         <div class="result-header">
           <div class="result-title">${s.title}</div>
-          <div class="result-note">Standardumfang laut Angebotsgenerator</div>
+          <div class="result-note">Enthaltene Arbeitspakete im Standardumfang</div>
         </div>
         <div class="result-rows">
           <div class="result-row"><div class="result-row-label">Stundensatz</div><div class="result-row-value">${fmtEuro(s.rate)} / h</div></div>
